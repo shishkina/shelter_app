@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  animal_name: MyString
+  type: 
+  age: 1
+  story: MyText
+  image_url: MyString
+  status: false
+
+two:
+  animal_name: MyString
+  type: 
+  age: 1
+  story: MyText
+  image_url: MyString
+  status: false
