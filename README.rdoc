@@ -21,7 +21,11 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+This application gives an opportunity for people to act as a shelter, put an animal for adoption, file a form for adoption.
+Later, in the development, it is planned to work with shelters and have many more animals to choose from. As well as include an API from Petfinder.
+
+The web application has an administrator role, which for now is set as a boolean field in the database.
+The Administrator has the permission to edit, delete accounts, comments, animals.
 
 
 Please feel free to use a different markup language if you do not plan to run
