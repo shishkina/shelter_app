@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :animals
+  has_many :animals, dependent: :destroy
 
   validates :name, presence: true
   EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

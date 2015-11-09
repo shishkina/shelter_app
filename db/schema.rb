@@ -11,24 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151105214327) do
+ActiveRecord::Schema.define(version: 20151109021051) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "animals", force: :cascade do |t|
     t.string   "animal_name"
-    t.string   "type"
+    t.string   "kind"
     t.integer  "age"
     t.text     "story"
-    t.string   "image_url"
-    t.boolean  "status"
+    t.string   "status",             default: "pending"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "animals", ["user_id"], name: "index_animals_on_user_id", using: :btree
+
+  create_table "attachments", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.text     "body"
@@ -45,7 +53,6 @@ ActiveRecord::Schema.define(version: 20151105214327) do
     t.string   "name",                                       null: false
     t.string   "phone",           limit: 20, default: "0"
     t.string   "email",                                      null: false
-    t.string   "password",                                   null: false
     t.boolean  "admin",                      default: false
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
@@ -53,6 +60,5 @@ ActiveRecord::Schema.define(version: 20151105214327) do
   end
 
   add_foreign_key "animals", "users"
-  add_foreign_key "comments", "animals"
   add_foreign_key "comments", "users"
 end

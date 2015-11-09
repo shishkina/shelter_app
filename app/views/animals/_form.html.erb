@@ -1,0 +1,47 @@
+
+<%=form_for [@user, @animal] do |f|%>
+<ul>
+  <% @animal.errors.full_messages.each do |error|%>
+  <li><%=error %></li>
+  <%end%>
+</ul>
+
+<p>
+  <%=f.label :animal_name%><br />
+  <%= f.text_field :animal_name%>
+</p>
+<p>
+
+</p>
+<p>
+  <%= f.label :kind%><br />
+  <%= f.text_field :kind%>
+</p>
+
+<p>
+  <%= f.label :age%><br />
+  <%= f.text_field :age%>
+</p>
+
+<p>
+  <%= f.label :story%><br />
+  <%= f.text_area :story%>
+</p>
+
+<p>
+  <% if @animal.image.exists? %>
+      <%= image_tag @animal.image.url %><br/>
+  <% end %>
+  <%= f.label :image, "Attach an Image" %><br />
+  <%= f.file_field :image %>
+</p>
+<% if logged_in? && current_user.admin == true %>
+
+  <%f.label :status%>
+  <%f.text_field :status%>
+<%end%>
+<p>
+  <%= f.submit %>
+</p>
+
+<%end%>

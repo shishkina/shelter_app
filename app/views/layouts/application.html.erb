@@ -7,6 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/animals">Animals</a></li>
+      <% if logged_in?%>
+      <li><a href="/users">Users</a></li>
+        <%=link_to 'Back', root_path%>
+      <%end%>
+    </ul>
+  </header>
+  <h4>
+    <% if logged_in? %>
+      <%= "Logged in as #{current_user.email}" %>
+      <div id="logout">
+        <%= button_to "Logout", logout_path, :method => "delete"%>
+        <%else%>
+        <%= link_to "Log in", login_path%>
+        <%= link_to "Sign up ", new_user_path%>
+      </div>
+    <% end %>
+
+  </h4>
 
 <%= yield %>
 

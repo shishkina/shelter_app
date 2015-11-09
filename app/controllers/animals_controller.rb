@@ -5,6 +5,7 @@ class AnimalsController < ApplicationController
 
   def show
     @animal = Animal.find(params[:id])
+    @user = User.find(@animal.user_id)
     @comment = Comment.new
     @comment.animal_id = @animal.id
   end
@@ -14,9 +15,10 @@ class AnimalsController < ApplicationController
   end
 
   def create
-    @animal = Animal.find(params[:id])
+    @animal = Animal.new animal_params
+    @animal.user_id = current_user.id
     @animal.save
-    redirect_to animal_path
+    redirect_to animal_path @animal
   end
 
   def edit
@@ -28,10 +30,16 @@ class AnimalsController < ApplicationController
     @animal.update(animal_params)
     redirect_to animal_path
   end
+  def destroy
+    @animal = Animal.find(params[:id])
+    @animal.destroy
+    # flash.notice = "Animal '#{@animal.animal_name}' DELETED!"
+    redirect_to animals_path
+  end
 
   private
   def animal_params
-    params.require(:animal).permit(:animal_name, :type, :age, :image_url, :story, :status)
+    params.require(:animal).permit(:animal_name, :kind, :age, :image, :story, :status, :user_id)
   end
 
 end

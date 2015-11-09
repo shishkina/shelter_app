@@ -1,0 +1,14 @@
+<div id="list-animals">
+  <h2>These are all animals available at this time: </h2>
+  <% @animals.each do |animal|%>
+  <li>
+    <%= link_to animal.animal_name, animal_path(animal)%>
+  </li>
+  <%end%>
+</ul>
+
+<%if logged_in?%>
+<%=link_to "Add animal", new_animal_path%>
+<%end%>
+
+</div>

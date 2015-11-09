@@ -1,0 +1,42 @@
+<h1><%= @animal.animal_name%></h1>
+
+<p>
+  <%if @animal.image.exists?%>
+  <%=image_tag @animal.image.url(:medium)%>
+  <%end%>
+</p>
+  <p>
+    Owner: <%= @user.name %>
+    <%=@user.phone%>
+  </p>
+<p>
+<%=@animal.kind%>
+</p>
+  <p>
+    <%=@animal.age%>
+  </p>
+
+<p>
+  <%= @animal.story%>
+</p>
+<%if logged_in? && current_user.admin == true%>
+<p>
+  <%= link_to "Delete", animal_path(@animal), data: {confirm: "Are you sure you want to delete this article?"}, method: :delete%>
+</p>
+<p>
+  Would you like to edit or update the status? Current status is: <%=@animal.status%>
+  <%= link_to "Edit", edit_animal_path(@animal)%>
+</p>
+<%end%>
+
+
+<%if logged_in?%>
+<p>
+<h3> Comments (<%=@animal.comments.size%>)</h3>
+<%= render partial: 'animals/comment', collection: @animal.comments%>
+<%= render partial: 'comments/form'%>
+</p>
+  <%end%>
+<p>
+  <%= link_to "<< Back to the list of animals", animals_path%>
+</p>

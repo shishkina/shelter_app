@@ -5,11 +5,13 @@ Rails.application.routes.draw do
 
   root to: 'welcome#index'
 
-  resources :users
+  resources :users do
+  resources :animals
+end
+resources :animals do
+  resources :comments
 
-  resources :animals do
-    resources :comments
-  end
+end
 
 
   # The priority is based upon order of creation: first created -> highest priority.

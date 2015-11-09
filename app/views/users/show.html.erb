@@ -1,0 +1,17 @@
+
+<div id="user-page">
+  <h1>Hello, <%= @user.name%> </h1>
+
+<p>
+  If you would like to put up an animal for adoption
+  <%=link_to 'Click here', new_animal_path%>
+</p>
+
+
+<%if logged_in?%>
+<h3>Animals:</h3>
+<%=render partial: 'users/animal', collection: @user.animals%>
+
+
+<%end%>
+</div>
