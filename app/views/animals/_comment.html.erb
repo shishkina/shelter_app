@@ -1,5 +1,5 @@
 <div>
-  <h5>Comment by <%=comment.user_id%></h5>
+  <h5>Comment by <%=User.find(comment.user_id).name%></h5>
   <p class= "comment">
     <%=comment.body%>
   </p>

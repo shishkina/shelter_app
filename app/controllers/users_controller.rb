@@ -6,14 +6,14 @@ def new
 end
 
 def index
+  if logged_in? && current_user.admin==true
   @users = User.all
-
+  end
 end
 
 def show
   if logged_in?
-
-    @user = User.find(session[:user_id])
+  @user = User.find(session[:user_id])
   @animal = Animal.new
   @animal.user_id = @user.id
   else

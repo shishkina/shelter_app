@@ -1,14 +1,12 @@
+<%if logged_in? && current_user.admin == true%>
 <h1>These are current users: </h1>
-<%  @users.each do |user|%>
+<% @users.each do |user|%>
 <div class="user">
-  Name: <%=user.name %>
-  Phone: <%=user.phone%>
+  <%=link_to user.name, user_path(user)%>
 
-  <%if logged_in? && current_user.admin == true%>
   <p>
     <%= link_to "Delete", user_path(user), data: {confirm: "Are you sure you want to delete this user?"}, method: :delete%>
     <%=link_to 'Edit', edit_user_path(user)%>
-
   </p>
   <%end%>
 </div>

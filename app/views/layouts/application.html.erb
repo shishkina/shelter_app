@@ -11,7 +11,7 @@
     <ul>
       <li><a href="/">Home</a></li>
       <li><a href="/animals">Animals</a></li>
-      <% if logged_in?%>
+      <% if logged_in? && current_user.admin==true%>
       <li><a href="/users">Users</a></li>
         <%=link_to 'Back', root_path%>
       <%end%>
