@@ -1,0 +1,127 @@
+ /* "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+  html {
+    background: url('/images/colorful_parrot_background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body {
+    font-size: 100%;
+    width: auto;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    color: #D9E1E9;
+}
+
+.happy_picture {
+    margin: 10px 10px 10px 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    float: right;
+
+}
+img {
+    border-radius: 5px;
+    height: 300px;
+    width: 400px;
+    border: 10px;
+    border-color: green;
+  -webkit-box-shadow:
+     0px 0px 0px 2px rgba(0,0,0,0.6),
+                0px 0px 0px 7px #fff,
+                0px 0px 0px 10px rgba(0,0,0,0.2),
+                3px 3px 4px 10px #555;
+
+     -moz-box-shadow:
+     0px 0px 0px 2px rgba(0,0,0,0.6),
+                0px 0px 0px 7px #fff,
+                0px 0px 0px 10px rgba(0,0,0,0.2),
+                3px 3px 4px 10px #555;
+
+          box-shadow:
+     0px 0px 0px 2px rgba(0,0,0,0.6),
+                0px 0px 0px 7px #fff,
+                0px 0px 0px 10px rgba(0,0,0,0.2),
+                3px 3px 4px 10px #555;
+
+}
+h1 {
+    padding: 0px;
+    font-size: 100px;
+    letter-spacing: 7px;
+    margin: 0px;
+    font-family: 'Lobster', cursive;
+}
+h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+    margin: 10px;
+}
+h3 {
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+
+}
+p {
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    margin-left: 400px;
+    position: center;
+}
+.add-animal {
+      font-family: 'Lobster', cursive;
+      font-size: 20px;
+      margin-left: 100px;
+      position: center;
+
+}
+li {
+      list-style-type: none;
+}
+h4 {
+  position: center;
+}
+
+
+.button {
+    background-color: #57350B;
+    font-family: 'Lobster', cursive;
+    color: white;
+    border-width: thin;
+    border-color: black;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.field {
+    line-height: 23px;
+    border-color: black;
+    border-radius: 5px;
+    border-width: thin;
+    font-size: 15px;
+    padding-left: 10px;
+    margin-bottom:10px;
+    font-family: 'Lobster', cursive;
+}
+.form {
+    margin-top: 50px;
+}
+.text_field{
+    padding-left: 10px;
+    width:180px;
+    line-height: 23px;
+    border-color: black;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+}
+.left {
+    text-align: right;
+    padding-right: 40px;
+}
+.right {
+    text-align: left;
+}

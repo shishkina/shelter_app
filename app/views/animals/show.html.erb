@@ -1,4 +1,4 @@
-<h1><%= @animal.animal_name%></h1>
+<h2><%= @animal.animal_name%></h2>
 
 <p>
   <%if @animal.image.exists?%>
@@ -10,14 +10,14 @@
     <%=@user.phone%>
   </p>
 <p>
-<%=@animal.kind%>
+    This is a: <%=@animal.kind%>
 </p>
   <p>
-    <%=@animal.age%>
+    Age: <%=@animal.age%> years old
   </p>
 
 <p>
-  <%= @animal.story%>
+  Story: <%= @animal.story%>
 </p>
 <%if logged_in? && current_user.admin == true%>
 <p>
