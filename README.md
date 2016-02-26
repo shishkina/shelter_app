@@ -1,5 +1,5 @@
 # shelter_app
-[Link to The webpage](https://rocky-ridge-7044.herokuapp.com/)
+[Link to The webpage](https://animalshelter.herokuapp.com/)
 
 The application is still in development.The CSS/HTML will be improved, along with additional implementation of user stories.
 
@@ -8,7 +8,7 @@ The application is still in development.The CSS/HTML will be improved, along wit
 * Ruby on Rails
 * CSS/HTML/ERB
 * Heroku(Hosting)
-* GitHub(organizing, aversion control)
+* GitHub(organizing, version control)
 
 
 ### User stories:
