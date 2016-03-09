@@ -31739,3 +31739,17 @@ Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-09 13:24:10 -0500
+
+
+Started GET "/" for ::1 at 2016-03-09 15:31:27 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (1.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 359ms (Views: 332.1ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-09 15:31:28 -0500
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-09 15:31:28 -0500
