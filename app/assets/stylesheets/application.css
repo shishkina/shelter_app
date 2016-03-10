@@ -14,7 +14,7 @@ body {
     width: auto;
     font-family: 'Lobster', cursive;
     text-align: center;
-    color: #D9E1E9;
+    color: #232246;
 }
 
 .happy_picture {
@@ -55,11 +55,13 @@ h1 {
     letter-spacing: 7px;
     margin: 0px;
     font-family: 'Lobster', cursive;
+    text-color: #FAF02A;
 }
 h2 {
     font-family: 'Lobster', cursive;
     font-size: 60px;
     margin: 10px;
+    color: #FAF02A;
 }
 h3 {
     font-size: 30px;
